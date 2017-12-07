@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Örnek Mobil Uygulama</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="benim.css" />
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+     <!-- Start of first page: #one -->
+    <div data-role="page" id="bir" data-theme="a"> 
+         
+	<div data-role="header" >
+        <h1> Bilgisayar Terimleri Sözlüğü</h1>
+    </div>
+	<div role="main" class="ui-content">
+        <form>
+    <input id="filter-for-listview" data-type="search" placeholder="Aranacak Kelimeyi Giriniz...">
+</form>
+<ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+    <li><a href="#anakart" data-rel="dialog" data-transition="slidefade">Anakart</a></li>
+    <li><a href="#islemci" data-rel="dialog" data-transition="slidefade">İşlemci</a></li>
+        </ul>     
+        
+        </div>
+   
+</div>
+<!-- Start of second page: #two -->
+<div data-role="page" id="anakart" data-theme="a">
+
+	<div data-role="header" data-theme="a">
+		<h1>Anakart</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>Two</h2>
+		<p>Anakart, bilgisayarın tüm iç ve dış donanım birimlerinin üzerindeki bağlantı portlarına bağlandığı, üzerinde elektronik devre elemanlarının bulunduğu bilgisayarın en temel parçasıdır. Aynı zamanda mainboard, motherboard, system board olarak ta ifade edilebilir.
+        </p>
+
+		<p><a href="#bir" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Anasayfaya geri dön</a></p>
+
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<h4>Anakart</h4>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="islemci">
+
+	<div data-role="header" data-theme="a">
+		<h1>İşlemci</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<h2>İşlemci</h2>
+		<p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+		<p><a href="#one" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Anasayfaya geri dön</a></p>
+	</div><!-- /content -->
+    
+</div>
+    
+	<div data-role="footer" data-theme="a">
+		<h4>Anakart</h4>
+	</div><!-- /footer -->
+
+    
+
+
+</body>
+    
+</html>
